@@ -87,6 +87,11 @@ public class SpigotConfig implements Config {
     }
 
     @Override
+    public Object get(String key, Object def) {
+        return config.get(key, def);
+    }
+
+    @Override
     public void save() throws IOException {
         config.save(file);
     }

@@ -22,6 +22,8 @@ public interface Config {
 
     Object get(String key);
 
+    Object get(String key, Object def);
+
     void save() throws IOException;
 
     void load() throws IOException, InvalidConfigurationException;
