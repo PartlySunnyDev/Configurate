@@ -41,7 +41,7 @@ public class ConfigManagerImpl implements ConfigManager {
     }
 
     @Override
-    public void reloadAll() throws IOException, InvalidConfigurationException {
+    public void loadAll() throws IOException, InvalidConfigurationException {
         for (Config config : configs.values()) {
             config.load();
         }

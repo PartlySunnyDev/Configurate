@@ -46,7 +46,7 @@ public interface ConfigManager {
      * @throws IOException if an I/O error occurs
      * @throws InvalidConfigurationException if an invalid configuration is found
      */
-    void reloadAll() throws IOException, InvalidConfigurationException;
+    void loadAll() throws IOException, InvalidConfigurationException;
 
     /**
      * Saves all default configs in the manager
