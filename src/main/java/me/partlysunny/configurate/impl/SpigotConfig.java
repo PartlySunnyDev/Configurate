@@ -43,7 +43,7 @@ public class SpigotConfig implements Config {
     }
 
     public SpigotConfig(String name, String defaultFileName) {
-        this(new File(Configurate.instance().plugin().getDataFolder(), name), Configurate.instance().plugin().getClass().getResourceAsStream(defaultFileName));
+        this(new File(Configurate.instance().plugin().getDataFolder(), name), Configurate.instance().plugin().getResource(defaultFileName));
     }
 
     @Override
