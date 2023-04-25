@@ -1,3 +1,9 @@
+# Configurate
+[![](https://jitpack.io/v/PartlySunnyDev/Configurate.svg)](https://jitpack.io/#PartlySunnyDev/Configurate)
+![](https://img.shields.io/github/languages/top/PartlySunnyDev/Configurate)
+![](https://img.shields.io/github/v/release/PartlySunnyDev/Configurate)
+![](https://img.shields.io/github/stars/PartlySunnyDev/Configurate?style=social)
+
 ## Intuitive configuration API for Spigot 
 Have you ever needed a _smooth_ config API when making your plugins? Have you ever thought the existing spigot API was too _clunky_? Well, this is the API for you!
 
