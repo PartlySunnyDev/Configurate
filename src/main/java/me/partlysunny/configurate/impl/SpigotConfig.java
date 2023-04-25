@@ -68,13 +68,13 @@ public class SpigotConfig implements Config {
 
     @Override
     @SuppressWarnings("unchecked")
-    public <T, U> T load(String key, DataAdapter<T, U> adapter) {
+    public <T, U> T get(String key, DataAdapter<T, U> adapter) {
         return adapter.deserialize((U) config.get(key));
     }
 
     @Override
     @SuppressWarnings("unchecked")
-    public <T, U> T load(String key, T def, DataAdapter<T, U> adapter) {
+    public <T, U> T get(String key, T def, DataAdapter<T, U> adapter) {
         if (!config.contains(key)) {
             return def;
         }
@@ -82,7 +82,7 @@ public class SpigotConfig implements Config {
     }
 
     @Override
-    public Object load(String key) {
+    public Object get(String key) {
         return config.get(key);
     }
 
@@ -92,7 +92,7 @@ public class SpigotConfig implements Config {
     }
 
     @Override
-    public void reload() throws IOException, InvalidConfigurationException {
+    public void load() throws IOException, InvalidConfigurationException {
         config.load(file);
     }
 

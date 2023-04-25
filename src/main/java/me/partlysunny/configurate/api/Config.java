@@ -16,15 +16,15 @@ public interface Config {
 
     void set(String key, Object object);
 
-    <T, U> T load(String key, DataAdapter<T, U> adapter);
+    <T, U> T get(String key, DataAdapter<T, U> adapter);
 
-    <T, U> T load(String key, T def, DataAdapter<T, U> adapter);
+    <T, U> T get(String key, T def, DataAdapter<T, U> adapter);
 
-    Object load(String key);
+    Object get(String key);
 
     void save() throws IOException;
 
-    void reload() throws IOException, InvalidConfigurationException;
+    void load() throws IOException, InvalidConfigurationException;
 
     void saveDefault() throws IOException, InvalidConfigurationException;
 

@@ -43,7 +43,7 @@ public class ConfigManagerImpl implements ConfigManager {
     @Override
     public void reloadAll() throws IOException, InvalidConfigurationException {
         for (Config config : configs.values()) {
-            config.reload();
+            config.load();
         }
     }
 
