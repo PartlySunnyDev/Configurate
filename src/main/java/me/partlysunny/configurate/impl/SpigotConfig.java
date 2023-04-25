@@ -62,6 +62,11 @@ public class SpigotConfig implements Config {
     }
 
     @Override
+    public void set(String key, Object object) {
+        config.set(key, object);
+    }
+
+    @Override
     @SuppressWarnings("unchecked")
     public <T, U> T load(String key, DataAdapter<T, U> adapter) {
         return adapter.deserialize((U) config.get(key));
@@ -74,6 +79,11 @@ public class SpigotConfig implements Config {
             return def;
         }
         return adapter.deserialize((U) config.get(key));
+    }
+
+    @Override
+    public Object load(String key) {
+        return config.get(key);
     }
 
     @Override
