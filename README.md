@@ -30,7 +30,7 @@ Have you ever needed a _smooth_ config API when making your plugins? Have you ev
     <dependency>
         <groupId>com.github.PartlySunnyDev</groupId>
         <artifactId>Configurate</artifactId>
-        <version>-SNAPSHOT</version> <!-- Add this dependency -->
+        <version>VERSION</version> <!-- Add this dependency -->
     </dependency>
 </dependencies>
 ```
