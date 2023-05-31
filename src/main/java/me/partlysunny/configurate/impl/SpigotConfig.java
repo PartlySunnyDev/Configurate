@@ -92,6 +92,16 @@ public class SpigotConfig implements Config {
     }
 
     @Override
+    public <T> T get(String key, Class<T> clazz) throws ClassCastException {
+        return clazz.cast(get(key));
+    }
+
+    @Override
+    public <T> T get(String key, T def, Class<T> clazz) throws ClassCastException {
+        return clazz.cast(get(key, def));
+    }
+
+    @Override
     public void save() throws IOException {
         config.save(file);
     }

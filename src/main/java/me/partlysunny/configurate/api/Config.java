@@ -77,6 +77,27 @@ public interface Config {
     Object get(String key, Object def);
 
     /**
+     * Gets a value from the config. Safer way to do get without having to manually cast
+     * @param key The key to get
+     * @param clazz The class to cast the object to
+     * @return The object related to the key
+     * @param <T> The type of object to read
+     * @throws ClassCastException If the object cannot be cast to the specified class
+     */
+    <T> T get(String key, Class<T> clazz) throws ClassCastException;
+
+    /**
+     * Gets a value from the config. Safer way to do get without having to manually cast
+     * @param key The key to get
+     * @param def The default value to return if the key is not found
+     * @param clazz The class to cast the object to
+     * @return The object related to the key or the default value
+     * @param <T> The type of object to read
+     * @throws ClassCastException If the object cannot be cast to the specified class
+     */
+    <T> T get(String key, T def, Class<T> clazz) throws ClassCastException;
+
+    /**
      * Saves the config to the specified file.
      * @throws IOException If an I/O error occurs
      */
