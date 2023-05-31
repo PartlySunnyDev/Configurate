@@ -1,8 +1,8 @@
 package me.partlysunny.configurate.impl;
 
 import me.partlysunny.configurate.Configurate;
-import me.partlysunny.configurate.api.DataAdapter;
 import me.partlysunny.configurate.api.Config;
+import me.partlysunny.configurate.api.DataAdapter;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;

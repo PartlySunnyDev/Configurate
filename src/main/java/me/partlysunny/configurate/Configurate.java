@@ -4,13 +4,19 @@ import me.partlysunny.configurate.api.ConfigManager;
 import me.partlysunny.configurate.impl.ConfigManagerImpl;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import static java.util.logging.Level.*;
+import static java.util.logging.Level.INFO;
 
 public final class Configurate {
 
     public static boolean LOG_MODE = true;
 
     private static Configurate INSTANCE;
+    private final JavaPlugin plugin;
+    private final ConfigManager configManager = new ConfigManagerImpl();
+
+    public Configurate(JavaPlugin plugin) {
+        this.plugin = plugin;
+    }
 
     public static Configurate instance() {
         if (INSTANCE == null) {
@@ -26,13 +32,6 @@ public final class Configurate {
         INSTANCE = new Configurate(plugin);
         if (LOG_MODE) plugin.getLogger().log(INFO, "Configurate was initialized -> " + plugin.getName() + "!");
     }
-
-    public Configurate(JavaPlugin plugin) {
-        this.plugin = plugin;
-    }
-
-    private final JavaPlugin plugin;
-    private final ConfigManager configManager = new ConfigManagerImpl();
 
     public JavaPlugin plugin() {
         return plugin;

@@ -1,7 +1,7 @@
 package me.partlysunny.configurate.impl;
 
-import me.partlysunny.configurate.api.ConfigManager;
 import me.partlysunny.configurate.api.Config;
+import me.partlysunny.configurate.api.ConfigManager;
 import org.bukkit.configuration.InvalidConfigurationException;
 
 import java.io.IOException;

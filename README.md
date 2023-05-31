@@ -1,20 +1,26 @@
 # Configurate
+
 [![](https://jitpack.io/v/PartlySunnyDev/Configurate.svg)](https://jitpack.io/#PartlySunnyDev/Configurate)
 ![](https://img.shields.io/github/languages/top/PartlySunnyDev/Configurate)
 ![](https://img.shields.io/github/v/release/PartlySunnyDev/Configurate)
 ![](https://img.shields.io/github/stars/PartlySunnyDev/Configurate?style=social)
 
-## Intuitive configuration API for Spigot 
-Have you ever needed a _smooth_ config API when making your plugins? Have you ever thought the existing spigot API was too _clunky_? Well, this is the API for you!
+## Intuitive configuration API for Spigot
+
+Have you ever needed a _smooth_ config API when making your plugins? Have you ever thought the existing spigot API was
+too _clunky_? Well, this is the API for you!
 
 ### Features
+
 - [x] Easy to use
 - [x] DataAdapters to load and save your own data
 - [x] Configuration manager to manage your configs
 - [x] Specify defaults for your configs from resources
 
 ### Setup
+
 1. Add the jitpack repository to your pom.xml
+
 ```xml
 <repositories>
     <repository>
@@ -25,6 +31,7 @@ Have you ever needed a _smooth_ config API when making your plugins? Have you ev
 ```
 
 2. Add the dependency to your pom.xml
+
 ```xml
 <dependencies>
     <dependency>
@@ -36,6 +43,7 @@ Have you ever needed a _smooth_ config API when making your plugins? Have you ev
 ```
 
 3. Shade the dependency into your plugin
+
 ```xml
 <build>
     <plugins>
@@ -59,12 +67,14 @@ Have you ever needed a _smooth_ config API when making your plugins? Have you ev
 ### Usage
 
 ### MAKE SURE TO INITIALIZE CONFIGURATE BEFORE USING IT
+
 ```java
 // Initialize Configurate
 Configurate configurate = new Configurate(this);
 ```
 
 #### Simple config
+
 ```java
 // Create a config
 Config config = new SpigotConfig("myConfig.yml");
@@ -78,6 +88,7 @@ Configurate.instance().configManager().addConfig("myConfig", config);
 ```
 
 #### Config with defaults
+
 ```java
 Config config = new SpigotConfig("myConfig.yml", "myConfig.yml");
 config.saveDefaults();
