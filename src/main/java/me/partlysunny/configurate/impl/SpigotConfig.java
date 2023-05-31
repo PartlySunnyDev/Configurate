@@ -98,6 +98,15 @@ public class SpigotConfig implements Config {
 
     @Override
     public void load() throws IOException, InvalidConfigurationException {
+        if (!file.exists()) {
+            if (defaultFileStream != null) {
+                saveDefault();
+            } else {
+                if (!file.createNewFile()) {
+                    throw new IOException("Could not create file " + file.getName());
+                }
+            }
+        }
         config.load(file);
     }
 
